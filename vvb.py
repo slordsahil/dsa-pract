@@ -1,3 +1,0 @@
-print('hj')
-
-print('bfbf')
