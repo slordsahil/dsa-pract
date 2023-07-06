@@ -1,13 +1,16 @@
 def balanced_parenthese(s):
     openings =set('([{')
-    matching_parentheses =set([('(',')'),('[',']'),('{','}')])
-    
+    matching_parentheses =([('(',')'),('[',']'),('{','}')])
+
     stack=[]
     for i in s:
         if i in openings:
             stack.append(i)
         else:
-            if (stack[-1],i) in matching_parentheses:
+            if stack==[]:
+                return False
+            
+            elif (stack[-1],i) in matching_parentheses:
                 stack.pop()
             else:
                 return False
@@ -15,5 +18,5 @@ def balanced_parenthese(s):
             
         
         
-a=balanced_parenthese('')   
+a=balanced_parenthese('()]')   
 print (a)
