@@ -14,7 +14,8 @@ class queue_2stack():
             return self.stack2.pop()
         return self.stack2.pop()
 
-
-
-
-    
+q=queue_2stack()
+for i in range(5):
+    q.enqueue(i)
+for i in range(5):
+    print(q.dequeue())
