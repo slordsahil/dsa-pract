@@ -14,8 +14,8 @@ class check_cycle(node):
                 node_list.append(sol)
                 sol = node.next(sol)
             else:
-                return str(True )+str("its cycle")
-        return str(False )+str("its not cycle")
+                return str(True )+str(" its cycle")
+        return str(False )+str(" its not cycle")
      
 
 a=node(input)  
