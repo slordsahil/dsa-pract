@@ -27,3 +27,4 @@ b.next=c
 c.next=d
 test=check_cycle.check(a)
 print(test)          
+# new changes 
