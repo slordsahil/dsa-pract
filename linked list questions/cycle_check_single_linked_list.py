@@ -20,7 +20,7 @@ class check_cycle(node):
 
 a=node(input)  
 b=node(2) 
-c=node(3)
+c=node(3) 
 d=node(4)
 a.next=b
 b.next=c
