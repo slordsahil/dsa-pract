@@ -18,7 +18,7 @@ class check_cycle(node):
         return str(False )+str("its not cycle")
      
 
-a=node(input)
+a=node(input)  
 b=node(2)
 c=node(3)
 d=node(4)
