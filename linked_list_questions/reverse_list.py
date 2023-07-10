@@ -10,7 +10,7 @@ class node():
             N=N.nextnode
             total.append(N)
             print("hi")
-        for i in range(len(total)//2):
+        for i in range(len(total)//2): 
             total[i].value,total[-(i+1)].value=total[-(i+1)].value,total[i].value
 
         
