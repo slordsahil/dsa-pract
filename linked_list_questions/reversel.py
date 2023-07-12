@@ -5,7 +5,7 @@ class node():
         self.nextnode=None
         
     def reverse(head):
-        total=[head]
+        total=[head] 
         while head.nextnode!=None:
             head=head.nextnode
             total.append(head)
@@ -18,7 +18,7 @@ class node():
 # a=node(1)
 # b=node(2)
 # c=node(3)
-# d=node(4)
+# d=node(4) 
 # a.nextnode=b
 # b.nextnode=c
 # c.nextnode=d
