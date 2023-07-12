@@ -34,3 +34,5 @@ class node():
 # print(c.nextnode.value)
 # print(d.nextnode.value)
 
+# we are not finding a.nextnode.value because a.nextnode is None and it will give an error message
+
