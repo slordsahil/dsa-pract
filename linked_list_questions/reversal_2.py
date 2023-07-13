@@ -4,7 +4,7 @@ class node():
         self.value = value
         self.nextnode = None
         
-    def reversal(head):
+    def reversal(head): 
         current =head
         previous="none"
         
