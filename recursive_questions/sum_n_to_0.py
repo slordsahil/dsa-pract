@@ -3,6 +3,6 @@ def rec(n):
         return 0
     else:
         return n +rec(n-1)
-a=rec(5)
+a=rec(50)
 print(a)
     
