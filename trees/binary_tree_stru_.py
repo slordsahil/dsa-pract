@@ -5,6 +5,7 @@ class binary_tree():
         self.childleft = None
         self.childright = None
         
+    
     def insert_childleft(self, newNode):
         if self.childleft==None:
             self.childleft = binary_tree(newNode)
@@ -21,6 +22,7 @@ class binary_tree():
             t.childright = self.childright
             self.childright=t
             
+    
     def get_childleft(self):
         return self.childleft
         
@@ -33,12 +35,13 @@ class binary_tree():
 store=binary_tree("restraurent")
 store.insert_childleft("veg")
 store.insert_childright("nonveg")
+
 #%%
-store.get_childleft().get_childvalue()
-
-
+def pre_order(root):
+    if root.get_childvalue!=None:
+        print(root.get_childvalue)
+        pre_order(root.get_childleft)
+        pre_order(root.get_childright)
 # %%
-store.insert_childleft("momos")
-# %%
-store.get_childleft().get_childleft().get_childvalue()
+pre_order(store)
 # %%
