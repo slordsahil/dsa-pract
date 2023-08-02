@@ -54,7 +54,10 @@ def pre_order(root,tree_nodes=[]):
     return tree_nodes
 pre_order(store)
 # %%
+tree_nodes=[]
+tree_nodes
 
+#%%
 def post_order(root,tree_nodes=[]):
     if root==None:
         return 
@@ -64,5 +67,18 @@ def post_order(root,tree_nodes=[]):
     post_order(root.get_childright())
     tree_nodes.append(root.get_childvalue())
     return tree_nodes
-pre_order(store)
+post_order(store)
+
+ # %%
+
+def in_order(root,tree_nodes=[]):
+    if root==None:
+        return 
+        
+        
+    in_order(root.get_childleft())
+    tree_nodes.append(root.get_childvalue())
+    in_order(root.get_childright())
+    return tree_nodes
+in_order(store)
 # %%

@@ -1,0 +1,97 @@
+#%%
+class min_heap():
+    def __init__(self,capacity):
+        self.storage=[0]*capacity
+        self.capacity=capacity
+        self.size=0
+    def  capacity(self):
+        return self.capacity
+    
+    def size(self):
+        return self.size
+    
+    def getparentindex(self,index):
+        return (index//2)-1
+    
+    def getleftchildindex(self,index):
+        return (index*2)+1
+    
+    def getrightchildindex(self,index):
+        return (index*2)+2
+    
+    def hasparent(self,index):
+        return self.getparentindex(index)>=0
+    
+    def hasleftchild(self,index):
+        return self.getleftchildindex(index)<self.size
+    
+    def hasrightchild(self,index):
+        return self.getrightchildindex(index)<self.size
+    
+    def isfull(self):
+        return self.size==self.capacity
+    
+    def swap(self,index1,index2):
+        temp=self.storage[index1]
+        self.storage[index1]=self.storage[index2]
+        self.storage[index2]=temp
+        
+    def heapup(self,index):
+        if(self.hasparent(index) and self.storage[self.getparentindex(index)]>self.storage[index]):
+            self.swap(self.getparentindex(index),index)
+            self.heapup(self.getparentindex(index))
+            
+    def heapdown(self,index):
+        smallerchild=index    
+        if self.hasleftchild(index) and self.storage[index]>self.storage[self.getleftchildindex(index)]:
+                smallerchild=self.getleftchildindex(index)
+                
+        if self.hasrightchild(index) and self.storage[index]>self.storage[self.getrightchildindex(index)]:
+            smallerchild=self.getrightchildindex(index)
+        if self.storage[index]!=self.storage[smallerchild]:
+            self.swap(index,smallerchild)
+            self.heapdown(smallerchild)
+        
+            
+            
+        
+    def insert(self,data):
+        if(self.isfull()):
+            return ("heap is full")
+        self.storage[self.size]=data
+        self.size+=1
+        self.heapup(self.size-1)
+        
+    def del_min(self):
+        if self.size==0:
+            return "heap is empty"
+        data=self.storage[0]
+        self.storage[0]=self.storage[self.size-1]
+        self.storage.pop()
+        self.size-=1
+        self.heapdown(0)
+        return data
+        
+            
+    
+    
+# %%
+heap=min_heap(7)
+heap.insert(1)
+heap.insert(2)
+
+
+# %%
+heap.insert(3)
+heap.insert(4)
+heap.insert(5)
+heap.insert(6)
+heap.insert(7)
+#%%
+heap.insert(8)
+
+# %%
+heap.storage
+# %%
+heap.del_min()
+# %%
